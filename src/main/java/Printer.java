@@ -10,6 +10,9 @@ public class Printer {
     }
 
     public void print(int numberOfPages, int numberOfCopies) {
-        this.numberOfSheetsLeft -= numberOfPages * numberOfCopies;
+        int pagesRequired = numberOfPages * numberOfCopies;
+        if (this.numberOfSheetsLeft >= pagesRequired) {
+            this.numberOfSheetsLeft -= pagesRequired;
+        }
     }
 }
