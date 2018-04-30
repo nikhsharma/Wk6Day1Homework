@@ -19,6 +19,7 @@ public class Printer {
         int pagesRequired = numberOfPages * numberOfCopies;
         if (this.numberOfSheetsLeft >= pagesRequired) {
             this.numberOfSheetsLeft -= pagesRequired;
+            this.toner -= pagesRequired;
         }
     }
 

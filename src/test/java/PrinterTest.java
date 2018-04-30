@@ -40,4 +40,10 @@ public class PrinterTest {
         assertEquals(20, testPrinter.getToner());
     }
 
+    @Test
+    public void tonerIsUsedWhenPrinting() {
+        testPrinter.print(4, 2);
+        assertEquals(12, testPrinter.getToner());
+    }
+
 }
