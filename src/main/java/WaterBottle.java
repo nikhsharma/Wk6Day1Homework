@@ -12,4 +12,8 @@ public class WaterBottle {
     public void drink() {
         this.volume -= 10;
     }
+
+    public void empty() {
+        this.volume = 0;
+    }
 }
