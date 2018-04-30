@@ -28,4 +28,11 @@ public class PrinterTest {
         assertEquals(10, testPrinter.getNumberOfSheetsLeft());
     }
 
+    @Test
+    public void canRefillPaper() {
+        testPrinter.print(4,2);
+        testPrinter.refill(8);
+        assertEquals(10, testPrinter.getNumberOfSheetsLeft());
+    }
+
 }

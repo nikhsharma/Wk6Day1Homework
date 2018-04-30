@@ -15,4 +15,8 @@ public class Printer {
             this.numberOfSheetsLeft -= pagesRequired;
         }
     }
+
+    public void refill(int piecesOfPaper) {
+        this.numberOfSheetsLeft += piecesOfPaper;
+    }
 }
