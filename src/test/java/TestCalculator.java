@@ -9,18 +9,14 @@ public class TestCalculator {
 
     @Before
     public void before() {
-        testCalculator = new Calculator(2, 6);
+        testCalculator = new Calculator();
     }
 
     @Test
-    public void hasNum1() {
-        assertEquals(2, testCalculator.getNum1());
+    public void canAdd() {
+        assertEquals(8, testCalculator.add(2, 6));
     }
 
-    @Test
-    public void hanNum2() {
-        assertEquals(6, testCalculator.getNum2());
-    }
 }
 
 
