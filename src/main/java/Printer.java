@@ -1,8 +1,10 @@
 public class Printer {
     private int numberOfSheetsLeft;
     private int toner;
+    private int maxSheets;
 
     public Printer(int numberOfSheetsLeft, int toner) {
+        this.maxSheets = 20;
         this.numberOfSheetsLeft = numberOfSheetsLeft;
         this.toner = toner;
     }
@@ -24,6 +26,8 @@ public class Printer {
     }
 
     public void refill(int piecesOfPaper) {
-        this.numberOfSheetsLeft += piecesOfPaper;
+        if (piecesOfPaper <= (this.maxSheets - this.numberOfSheetsLeft)) {
+            this.numberOfSheetsLeft += piecesOfPaper;
+        }
     }
 }
