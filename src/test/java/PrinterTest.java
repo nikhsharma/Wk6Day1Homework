@@ -36,8 +36,8 @@ public class PrinterTest {
     }
 
     @Test
-    public void cantRefillWithoutEnoughPaper() {
-        testPrinter.refill(12);
+    public void cantRefillOverMaxSheets() {
+        testPrinter.refill(35);
         assertEquals(10, testPrinter.getNumberOfSheetsLeft());
     }
 
@@ -52,4 +52,10 @@ public class PrinterTest {
         assertEquals(12, testPrinter.getToner());
     }
 
+    @Test
+    public void cantPrintWithoutEnoughToner() {
+        testPrinter.print(5, 7);
+        assertEquals(10, testPrinter.getNumberOfSheetsLeft());
+        assertEquals(20, testPrinter.getToner());
+    }
 }

@@ -4,7 +4,7 @@ public class Printer {
     private int maxSheets;
 
     public Printer(int numberOfSheetsLeft, int toner) {
-        this.maxSheets = 20;
+        this.maxSheets = 40;
         this.numberOfSheetsLeft = numberOfSheetsLeft;
         this.toner = toner;
     }
@@ -19,7 +19,7 @@ public class Printer {
 
     public void print(int numberOfPages, int numberOfCopies) {
         int pagesRequired = numberOfPages * numberOfCopies;
-        if (this.numberOfSheetsLeft >= pagesRequired) {
+        if ((this.numberOfSheetsLeft >= pagesRequired) && (this.toner >= pagesRequired)) {
             this.numberOfSheetsLeft -= pagesRequired;
             this.toner -= pagesRequired;
         }
